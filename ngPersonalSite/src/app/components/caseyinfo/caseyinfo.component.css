@@ -1,0 +1,37 @@
+#buttons {
+  position: fixed;
+  text-align: center;
+  top: 40%;
+  right: 0%;
+}
+#contactinfo {
+  position: fixed;
+  font-size: large;
+  top: 1%;
+}
+
+.button {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+@media screen and (max-width: 850px) and (orientation: landscape) {
+  #buttons {
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    right: 10%;
+  }
+
+  .button {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+@media screen and (max-width: 450px) and (orientation: portrait){
+  #buttons {
+    position: fixed;
+    text-align: center;
+    top: 35%;
+  }
+}

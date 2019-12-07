@@ -1,0 +1,15 @@
+#appcontainer {
+  position: fixed;
+  bottom: 0;
+  right: auto;
+  text-align: right;
+  font-size: x-large;
+}
+#cornerman {
+  position: fixed;
+  bottom: 0px;
+  left: 0%;
+  width: 18vw;
+  height: auto;
+}
+
