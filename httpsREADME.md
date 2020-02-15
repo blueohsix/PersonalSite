@@ -59,7 +59,7 @@ At this point, you can paste your EC2's IP address into your browser's address b
 2) Open the hosted zone for your domain name.
 3) Big blue button, 'Create Record Set'.
 4) Optional: add a prefix to your domain name. The default is blank and this is where you would type 'www' or whatever you want to preface your site's name.
-(Insight: If you add a prefix, you must use it later when we create our ssl certificate. For example, if your purchased domain name is 'firstnamelastname.dev' and you prefaced it with 'www', you would need to create a certificate for 'www.firstnamelastname.dev'. Creating a certificate for 'firstnamelastname.dev' for the record set 'www.firstnamelastname.dev' leads to a certificate mismatch and will scare traffic away. This can be addressed by creating a wildcard certificate '*.firstnamelastname.dev' but you're going to need to adjust your [virtual hosts](https://httpd.apache.org/docs/2.4/vhosts/name-based.html). You'll also need to adjust your virtual hosts if you're adding more than one certificate).
+(Insight: If you add a prefix, you must use it later when we create our ssl certificate. For example, if your purchased domain name is 'firstnamelastname.dev' and you prefaced it with 'www', you would need to create a certificate for 'www.firstnamelastname.dev'. Creating a certificate for 'firstnamelastname.dev' for the record set 'www.firstnamelastname.dev' leads to a certificate mismatch and will scare traffic away. This can be addressed by creating a wildcard certificate with an asterisk prefix, but you're going to need to adjust your [virtual hosts](https://httpd.apache.org/docs/2.4/vhosts/name-based.html). You'll also need to adjust your virtual hosts if you're adding more than one certificate).
 5) Paste your ip address into the Value box. Create. Wait a few minutes for AWS to update itself.
 6) At this point, you should be able to navigate to your domain name and see the Amazon Linux AMI Test Page. If you're having problems, clear your browser's cache.
 
@@ -71,7 +71,6 @@ Due to Certbot not officially supporting Amazon Linux [1] this is might be a bum
 3) wget https://dl.eff.org/certbot-auto
 4) chmod a+x certbot-auto
 5) sudo ./certbot-auto --debug
-
 Wait for the installation to finish.
 6) enter your email address and follow the prompts. IMPORTANT: when entering your domain name(s), you must enter the domain name AND the prefix if you added one. See 'Insight' below Step 4 in the previous section. If you didn't add a prefix, enter your just your domain name.
 The setup might fail and that is okay! Keep going.
