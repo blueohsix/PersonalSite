@@ -14,14 +14,14 @@ Https does not affect your development process, https instantly makes your site 
 6) Big blue buttons, 'Review and Launch', 'Launch'.
 7) If this is not your first time launching an instance, you can use an old keypair. First time launches in different regions will require a new keypair.
 If you're creating a new keypair, name it something memorable and save it in a safe place.
-You can secure your keypair by creating a .ssh folder in your home directory and moving the .pem file into it.
-* Via terminal:
-* mkdir ~/.ssh/
-* mv ~/Downloads/KeypairName.pem  ~/.ssh/KeypairName.pem
-* chmod 400 ~/.ssh/KeypairName.pem
-(makes the file readonly)
-We will reference this file later for SSHing into our instance.
+You can secure your keypair by creating a .ssh folder in your home directory and moving the .pem file into it. We will reference this file later for SSHing into our instance.
 
+Via terminal:
+```
+mkdir ~/.ssh/
+mv ~/Downloads/KeypairName.pem  ~/.ssh/KeypairName.pem
+chmod 400 ~/.ssh/KeypairName.pem
+```
 8) Launch the instance.
 
 #### Assigning Elastic IP address
@@ -78,14 +78,12 @@ Due to Certbot not officially supporting Amazon Linux [1] this is might be a bum
 3) wget https://dl.eff.org/certbot-auto
 4) chmod a+x certbot-auto
 5) sudo ./certbot-auto --debug
-Wait for the installation to finish.
 6) enter your email address and follow the prompts. IMPORTANT: when entering your domain name(s), you must enter the domain name AND the prefix if you added one. See 'Insight' below Step 4 in the previous section. If you didn't add a prefix, enter your just your domain name.
 The setup might fail and that is okay! Keep going.
 8) ./certbot-auto certonly --debug
 9) 3
 10) enter your domain name
 11) /var/www/html
-You're not done yet, we just obtained a certificate. Now we're going to configure things.
 12) ./certbot-auto --debug
 13) enter your domain name again
 14) 1
@@ -94,15 +92,16 @@ You're not done yet, we just obtained a certificate. Now we're going to configur
 17) Go to your browser and refresh your page. If all is well, your site URL has that lovely padlock next to it! Good job, champ.
 If you're running into issues, make sure your record set and certificate match. Example: 'www.meh.com' matching 'www.meh.com' or 'meh.com' matching 'meh.com'). If you messed up, no problem. Cleanup the letsencrypt and httpd/conf.d inside of /etc and re-run the tool or adjust your record set to match the certificate.
 
-##### If you botched things and want to start over
+#### If you botched things and want to start over
 1) cd /etc/letsencrypt
 2) sudo rm -rf archive csr keys live renewal
 3) sudo mkdir archive csr keys live renewal
+
 If you enabled redirect:
-4) cd
-5) cd /etc/httpd/conf.d
-6) delete the redirect ('le-redirect...') file
-7) re-run the certbot tool. Good luck!
+1) cd
+2) cd /etc/httpd/conf.d
+3) delete the redirect ('le-redirect...') file
+4) re-run the certbot tool. Good luck!
 
 #### If you really messed up
 1) delete the record set in your hosted zone
