@@ -85,7 +85,7 @@ You're not done yet, we just obtained a certificate. Now we're going to configur
 15) 1
 16) Choose whether or not to have all http requests redirected to https. Redirecting will bounce requests from http://firstnamelastname.dev to https://firstnamelastname.dev .
 17) Go to your browser and refresh your page. If all is well, your site URL has that lovely padlock next to it! Good job, champ.
-If you're running into issues, make sure your record set and certificate match. Example: 'www.meh.com' matching 'www.meh.com' or 'meh.com' matching 'meh.com'). If you messed up, no problem. Cleanup the letsencrypt and certbot folders inside of /etc and re-run the tool or adjust your record set to match the certificate.
+If you're running into issues, make sure your record set and certificate match. Example: 'www.meh.com' matching 'www.meh.com' or 'meh.com' matching 'meh.com'). If you messed up, no problem. Cleanup the letsencrypt and httpd/conf.d inside of /etc and re-run the tool or adjust your record set to match the certificate.
 
 ##### If you botched things and want to start over
 1) cd /etc/letsencrypt
@@ -96,6 +96,12 @@ If you enabled redirect:
 5) cd /etc/httpd/conf.d
 6) delete the redirect ('le-redirect...') file
 7) re-run the certbot tool. Good luck!
+
+#### If you really messed up
+1) delete the record set in your hosted zone
+2) release the Elastic IP address or disassociate it
+3) terminate the instance
+4) start at the top.
 
 Additional resources:
 https://blog.lawrencemcdaniel.com/letsencrypt-amazon-linux-apache/
