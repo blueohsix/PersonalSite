@@ -45,7 +45,8 @@ export EC2USER=ec2-user@YourElasticIpAddressHere
 alias WhateverYouWantToTypeEveryTime="ssh -i ~/.ssh/KeypairName.pem $EC2USER"
 ```
 
-(fun fact: 'EC2USER' and 'ec2-user' will be switched to 'ubuntu' for Ubuntu EC2 instances.)
+fun fact: 'EC2USER' and 'ec2-user' will be switched to 'ubuntu' for Ubuntu EC2 instances.
+
 3) Save the file. Close Atom. Restart Terminal so that it will recognize the new alias we just created.
 
 #### Install Apache HTTP 2.4 (httpd24) on your instance
