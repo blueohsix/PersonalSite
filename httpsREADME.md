@@ -70,7 +70,7 @@ Due to Certbot not officially supporting Amazon Linux [1] this is might be a bum
 2) sudo yum install -y mod24_ssl
 3) wget https://dl.eff.org/certbot-auto
 4) chmod a+x certbot-auto
-5) sudo ./certbot-auto --debug
+5) sudo ./certbot-auto --debug 
 Wait for the installation to finish.
 6) enter your email address and follow the prompts. IMPORTANT: when entering your domain name(s), you must enter the domain name AND the prefix if you added one. See 'Insight' below Step 4 in the previous section. If you didn't add a prefix, enter your just your domain name.
 The setup might fail and that is okay! Keep going.
