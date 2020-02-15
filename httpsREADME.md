@@ -40,6 +40,7 @@ atom .bash_profile
 2) add these two lines (replacing YourElasticIpAddressHere, WhateverYouWantToTypeEveryTime, and KeypairName with your specifics):
 
 export EC2USER=ec2-user@YourElasticIpAddressHere
+
 alias WhateverYouWantToTypeEveryTime="ssh -i ~/.ssh/KeypairName.pem $EC2USER"
 
 (fun fact: 'EC2USER' and 'ec2-user' will be switched to 'ubuntu' for Ubuntu EC2 instances.)
