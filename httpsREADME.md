@@ -15,11 +15,13 @@ Https does not affect your development process, https instantly makes your site 
 7) If this is not your first time launching an instance, you can use an old keypair. First time launches in different regions will require a new keypair.
 If you're creating a new keypair, name it something memorable and save it in a safe place.
 You can secure your keypair by creating a .ssh folder in your home directory and moving the .pem file into it.
-Via terminal:
-mkdir ~/.ssh/
-mv ~/Downloads/KeypairName.pem  ~/.ssh/KeypairName.pem
-chmod 400 ~/.ssh/KeypairName.pem (makes the file readonly)
+* Via terminal:
+* mkdir ~/.ssh/
+* mv ~/Downloads/KeypairName.pem  ~/.ssh/KeypairName.pem
+* chmod 400 ~/.ssh/KeypairName.pem
+(makes the file readonly)
 We will reference this file later for SSHing into our instance.
+
 8) Launch the instance.
 
 #### Assigning Elastic IP address
