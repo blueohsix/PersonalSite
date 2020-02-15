@@ -56,7 +56,9 @@ alias WhateverYouWantToTypeEveryTime="ssh -i ~/.ssh/KeypairName.pem $EC2USER"
 5) sudo yum -y install httpd24
 6) sudo chkconfig httpd on
 7) sudo service httpd start
+
 (httpd also responds to 'stop' and 'restart')
+
 At this point, you can paste your EC2's IP address into your browser's address bar and see the results of your efforts! If all is well, you'll see the 'Amazon Linux AMI Test Page'.
 
 #### Associating your Route 53 Domain name with your EC2
