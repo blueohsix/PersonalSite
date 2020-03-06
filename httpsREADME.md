@@ -3,7 +3,7 @@ Pre-requisite: purchased domain name via [Amazon Route 53](https://aws.amazon.co
 
 This guide covers EC2 creation, assigning an elastic IP address to it, attaching that IP address to your domain name, modifying your .bash_profile for easy access to the instance, installing the Apache HTTP 2.4 (httpd24) server, installing Let's Encrypt's certbot for generation of free SSL certificates, and enabling http redirects to https.
 
-Https does not affect your development process, https instantly makes your site more professional, it increases your potential traffic due to visitors not being presented with warnings from their browsers or antivirus software about the site being insecure, plus some search engines won't even display sites that are non-https!
+Https instantly makes your site more professional, it increases your potential traffic due to visitors not being presented with warnings from their browsers or antivirus software about the site being insecure, and some search engines won't even display sites that are non-https!
 
 #### Create new EC2 Instance
 1) Log into the AWS Management console and search for 'EC2'.
